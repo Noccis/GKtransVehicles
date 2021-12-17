@@ -12,7 +12,7 @@ struct Vehicle : Identifiable {
     var id = UUID()
     
     var regNr: String
-    var besiktningsPeriod: String
+    var inspectionDate: String
     
     var incidentList: [String] = []         // Lista med incidenter
     

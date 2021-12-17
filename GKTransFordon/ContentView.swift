@@ -10,42 +10,63 @@ import SwiftUI
 
 struct ContentView: View {
     
-    var vehicles = [
-        Vehicle(regNr: "YLJ 666", besiktningsPeriod: "Januari"),
-        Vehicle(regNr: "ABC 123", besiktningsPeriod: "Februari"),
-        Vehicle(regNr: "IHK 872", besiktningsPeriod: "Mars")]
-                            
-                            
-                            
-                            
+    @StateObject var vehicleList = VehiclesList()
+    
+    
+    
+    
     var body: some View {
         
-        List(vehicles) {
+        NavigationView {
             
-            vehicle in
-           
-            VehicleView(vehicle: vehicle)
-            
-         }
+            List() {
+                
+                ForEach(vehicleList.vehicles) { vehicle in
+                    NavigationLink(destination: VehicleView(vehicle: vehicle)) {
+                        RowView(vehicle: vehicle)
+                    }
+                    
+                    
+                    
+                }
+//                vehicle in
+//
+//                RowView(vehicle: vehicle)
+                
+            }
+            .navigationBarTitle("Lastbilar")
+                .navigationBarItems(trailing: NavigationLink(destination: VehicleView()) {
+                                        Image(systemName: "plus.circle")
+                })
             
         }
-      
     }
-                            
-                            
-                            
-struct VehicleView: View {
+    
+    
+    
+}
+
+
+struct RowView: View {
+    
+    var vehicle: Vehicle
+    
+    var body: some View {
         
-        var vehicle: Vehicle
-        var body: some View {
+        HStack {
             
             Text(vehicle.regNr)
-        }
-    }
-                      
-struct ContentView_Previews: PreviewProvider {
-        static var previews: some View {
-                    ContentView()
+                .font(.title3)
+            Spacer()
+            Text(vehicle.inspectionDate)
             
         }
     }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+        
+    }
+}
