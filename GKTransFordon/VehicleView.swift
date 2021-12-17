@@ -11,6 +11,25 @@ struct VehicleView: View {
     
     var vehicle : Vehicle? = nil
     
+    //    init() {
+    //
+    //        if let vehicle = vehicle {
+    //            var newVehicle = Vehicle(regNr: "AAA 111", inspectionDate: "Januari")
+    //        }
+    //
+    //    }
+    
+    init(vehicle: Vehicle? = nil){
+        
+        
+        if let vehicle = vehicle {
+            self.vehicle = vehicle
+            
+        }else {
+            self.vehicle = Vehicle(regNr: "AAA 111", inspectionDate: "Januari")
+        }
+    }
+    
     var body: some View {
         
         VStack {
@@ -34,7 +53,7 @@ struct VehicleView: View {
                 .cornerRadius(15.0)
                 .padding()
             }
-            
+            Spacer()
             
             if let vehicle = vehicle {  // OM det finns en bil
                 Text(vehicle.regNr)
@@ -47,7 +66,15 @@ struct VehicleView: View {
             }
             
             Text("Besiktnings period:")
-            Text(vehicle!.inspectionDate)
+            if let vehicle = vehicle {
+                Text(vehicle.inspectionDate)
+                    .padding()
+            }else{
+                Text("Insert text")
+            }
+            
+            Spacer()
+            Text("Rapporterade incidenter")
             
         }
     }

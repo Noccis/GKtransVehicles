@@ -13,8 +13,6 @@ struct ContentView: View {
     @StateObject var vehicleList = VehiclesList()
     
     
-    
-    
     var body: some View {
         
         NavigationView {
@@ -29,9 +27,10 @@ struct ContentView: View {
                     
                     
                 }
-//                vehicle in
-//
-//                RowView(vehicle: vehicle)
+                .onDelete(perform: { indexSet in
+                    vehicleList.vehicles.remove(atOffsets: indexSet)
+                })
+
                 
             }
             .navigationBarTitle("Lastbilar")

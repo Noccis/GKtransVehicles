@@ -14,7 +14,7 @@ struct Vehicle : Identifiable {
     var regNr: String
     var inspectionDate: String
     
-    var incidentList: [String] = []         // Lista med incidenter
+    var incidentList: [Incident] = []         // Lista med incidenter
     
     
     
@@ -29,10 +29,7 @@ struct Vehicle : Identifiable {
         
     }
     
-    func createIncidentReport() {
-        
-        
-    }
+    
     
     func printVehicleData() {
         
