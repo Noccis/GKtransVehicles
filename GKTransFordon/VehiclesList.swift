@@ -16,7 +16,7 @@ class VehiclesList : ObservableObject {
     }
     
     func addMockData() {
-        vehicles.append(Vehicle(regNr: "YLJ 666", inspectionDate: "Januari"))
+        vehicles.append(Vehicle(regNr: "YLJ 066", inspectionDate: "Januari"))
         vehicles.append(Vehicle(regNr: "ABC 123", inspectionDate: "Februari"))
         vehicles.append(Vehicle(regNr: "IHK 872", inspectionDate: "Mars"))
         vehicles.append(Vehicle(regNr: "HEJ 666", inspectionDate: "Januari"))

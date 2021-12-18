@@ -13,6 +13,7 @@ struct Vehicle : Identifiable {
     
     var regNr: String
     var inspectionDate: String
+    var cityAppropiate: Bool = false
     
     var incidentList: [Incident] = []         // Lista med incidenter
     

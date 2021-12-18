@@ -27,14 +27,14 @@ struct ContentView: View {
                     
                     
                 }
-                .onDelete(perform: { indexSet in
-                    vehicleList.vehicles.remove(atOffsets: indexSet)
-                })
+//                .onDelete(perform: { indexSet in
+//                    vehicleList.vehicles.remove(atOffsets: indexSet)
+//                })
 
                 
             }
             .navigationBarTitle("Lastbilar")
-                .navigationBarItems(trailing: NavigationLink(destination: VehicleView()) {
+                .navigationBarItems(trailing: NavigationLink(destination: CreateVehicleView()) {
                                         Image(systemName: "plus.circle")
                 })
             

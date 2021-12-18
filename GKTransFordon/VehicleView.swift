@@ -26,7 +26,7 @@ struct VehicleView: View {
             self.vehicle = vehicle
             
         }else {
-            self.vehicle = Vehicle(regNr: "AAA 111", inspectionDate: "Januari")
+            self.vehicle = Vehicle(regNr: "Reg Nr", inspectionDate: "besiktnings period") // If you remove me, also remove the ! in text regNr and inspection date pls.
         }
     }
     
@@ -35,14 +35,12 @@ struct VehicleView: View {
         VStack {
             
             HStack {
-                if let vehicle = vehicle {  // OM det finns en bil
+               
                     Text("Ikon köra stan")
                         .padding()
-                }else{                      // Om man ska skapa en ny bil
-                    Text("Ingen ikon")
-                        .padding()
-                }
+                
                 Spacer()
+                
                 Button(action: {print("DELETE")}) {
                     Text("Delete")
                         .font(.title3)
@@ -55,23 +53,16 @@ struct VehicleView: View {
             }
             Spacer()
             
-            if let vehicle = vehicle {  // OM det finns en bil
-                Text(vehicle.regNr)
+                Text(vehicle!.regNr)
                     .font(.largeTitle)
                     .padding()
-            }else{                      // Om man ska skapa en ny bil
-                Text("Skapa ny bil")
-                    .font(.largeTitle)
-                    .padding()
-            }
+            
             
             Text("Besiktnings period:")
-            if let vehicle = vehicle {
-                Text(vehicle.inspectionDate)
+            
+                Text(vehicle!.inspectionDate)
                     .padding()
-            }else{
-                Text("Insert text")
-            }
+          
             
             Spacer()
             Text("Rapporterade incidenter")
