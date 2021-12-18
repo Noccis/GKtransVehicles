@@ -51,7 +51,7 @@ struct VehicleView: View {
                 .cornerRadius(15.0)
                 .padding()
             }
-            Spacer()
+//            Spacer()
             
                 Text(vehicle!.regNr)
                     .font(.largeTitle)

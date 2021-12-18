@@ -11,5 +11,7 @@ import Foundation
  Fixa en textfield i createvehcileview                              ()
  Create a createVehicle View                                        ()
  Hitta ett sätt att deleta från VehicleVIew.                        ()
+ Gör en add incident sida där man kan lägga till incident           ()
+ Rita upp vad som ska finnas på alla sidor.
  
  */

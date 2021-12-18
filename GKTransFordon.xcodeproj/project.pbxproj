@@ -16,6 +16,7 @@
 		0F4394872768E2A1004C37BD /* GKTransFordonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4394862768E2A1004C37BD /* GKTransFordonUITests.swift */; };
 		0F4394892768E2A1004C37BD /* GKTransFordonUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4394882768E2A1004C37BD /* GKTransFordonUITestsLaunchTests.swift */; };
 		0F4394962768E47C004C37BD /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4394952768E47C004C37BD /* Vehicle.swift */; };
+		0F43FBF8276E7EDA00C584C5 /* IncidentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F43FBF7276E7EDA00C584C5 /* IncidentView.swift */; };
 		0F7D35F5276CB22900DEE708 /* VehicleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7D35F4276CB22900DEE708 /* VehicleView.swift */; };
 		0F7D35F7276CBAA600DEE708 /* Incident.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7D35F6276CBAA600DEE708 /* Incident.swift */; };
 		0F7D35F9276CBACF00DEE708 /* VehiclesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7D35F8276CBACF00DEE708 /* VehiclesList.swift */; };
@@ -52,6 +53,7 @@
 		0F4394862768E2A1004C37BD /* GKTransFordonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GKTransFordonUITests.swift; sourceTree = "<group>"; };
 		0F4394882768E2A1004C37BD /* GKTransFordonUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GKTransFordonUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0F4394952768E47C004C37BD /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		0F43FBF7276E7EDA00C584C5 /* IncidentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentView.swift; sourceTree = "<group>"; };
 		0F7D35F4276CB22900DEE708 /* VehicleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleView.swift; sourceTree = "<group>"; };
 		0F7D35F6276CBAA600DEE708 /* Incident.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Incident.swift; sourceTree = "<group>"; };
 		0F7D35F8276CBACF00DEE708 /* VehiclesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesList.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				0F7D35FA276CD38800DEE708 /* TODO.swift */,
 				0F39A390276DF65700F92127 /* CreateVehicleView.swift */,
 				0F4394952768E47C004C37BD /* Vehicle.swift */,
+				0F43FBF7276E7EDA00C584C5 /* IncidentView.swift */,
 				0F7D35F8276CBACF00DEE708 /* VehiclesList.swift */,
 				0F7D35F6276CBAA600DEE708 /* Incident.swift */,
 				0F43946F2768E2A0004C37BD /* Assets.xcassets */,
@@ -275,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F43FBF8276E7EDA00C584C5 /* IncidentView.swift in Sources */,
 				0F4394962768E47C004C37BD /* Vehicle.swift in Sources */,
 				0F39A391276DF65700F92127 /* CreateVehicleView.swift in Sources */,
 				0F43946E2768E29E004C37BD /* ContentView.swift in Sources */,
