@@ -9,6 +9,7 @@ import SwiftUI
 
 struct VehicleView: View {
     
+    @EnvironmentObject var vehicleList : VehiclesList
     var vehicle : Vehicle? = nil
     
     //    init() {

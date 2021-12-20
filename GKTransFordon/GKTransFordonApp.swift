@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct GKTransFordonApp: App {
+    @StateObject var vehicleList = VehiclesList()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(vehicleList)
         }
     }
 }
