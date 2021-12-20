@@ -9,6 +9,9 @@ import SwiftUI
 
 struct VehicleView: View {
     
+    @EnvironmentObject var vehicleList : VehiclesList
+    @Environment(\.presentationMode) var presentationMode
+    
     var vehicle : Vehicle? = nil
     
     //    init() {
@@ -26,7 +29,7 @@ struct VehicleView: View {
             self.vehicle = vehicle
             
         }else {
-            self.vehicle = Vehicle(regNr: "Reg Nr", inspectionDate: "besiktnings period") // If you remove me, also remove the ! in text regNr and inspection date pls.
+            self.vehicle = Vehicle(regNr: "Reg Nr", inspectionDate: "besiktnings period", cityAppropiate: false) // If you remove me, also remove the ! in text regNr and inspection date pls.
         }
     }
     
@@ -41,7 +44,15 @@ struct VehicleView: View {
                 
                 Spacer()
                 
-                Button(action: {print("DELETE")}) {
+                Button(action: {
+                    if let vehicle = vehicle {
+                        
+                        deleteVehicle(vehicle: vehicle)
+                        presentationMode.wrappedValue.dismiss()
+                    }
+                    
+                    
+                }) {
                     Text("Delete")
                         .font(.title3)
                         .foregroundColor(Color.white)
@@ -51,7 +62,7 @@ struct VehicleView: View {
                 .cornerRadius(15.0)
                 .padding()
             }
-            Spacer()
+//            Spacer()
             
                 Text(vehicle!.regNr)
                     .font(.largeTitle)
@@ -68,6 +79,10 @@ struct VehicleView: View {
             Text("Rapporterade incidenter")
             
         }
+    }
+    func deleteVehicle(vehicle: Vehicle) {
+      
+        vehicleList.delete(vehicle: vehicle)
     }
 }
 

@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @StateObject var vehicleList = VehiclesList()
+    @EnvironmentObject var vehicleList : VehiclesList
     
     
     var body: some View {
@@ -24,19 +24,12 @@ struct ContentView: View {
                         RowView(vehicle: vehicle)
                     }
                     
-                    
-                    
                 }
-//                .onDelete(perform: { indexSet in
-//                    vehicleList.vehicles.remove(atOffsets: indexSet)
-//                })
-
-                
             }
             .navigationBarTitle("Lastbilar")
-                .navigationBarItems(trailing: NavigationLink(destination: CreateVehicleView()) {
-                                        Image(systemName: "plus.circle")
-                })
+            .navigationBarItems(trailing: NavigationLink(destination: CreateVehicleView()) {
+                Image(systemName: "plus.circle")
+            })
             
         }
     }

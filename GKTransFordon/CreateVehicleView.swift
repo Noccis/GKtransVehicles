@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct CreateVehicleView: View {
+    @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject var vehicleList : VehiclesList
     
     @State var regNrInput : String = ""
     @State var inspectionDateInput : String = ""
@@ -35,7 +37,8 @@ struct CreateVehicleView: View {
             Text("Kan köra i stan?")
             HStack {
                 Button(action: {
-                    
+                    cityAppropiate = true
+                    print("Kan köra i stan")
                 }, label: {Text("Ja ")
                     
                 })
@@ -45,7 +48,8 @@ struct CreateVehicleView: View {
                     .foregroundColor(Color.white)
                 
                 Button(action: {
-                    
+                    cityAppropiate = false
+                    print("Kan inte köra i stan")
                 }, label: {Text("Nej")
                     
                 })
@@ -59,7 +63,8 @@ struct CreateVehicleView: View {
     
             Spacer()
             Button(action: {
-                print(regNrInput, inspectionDateInput)
+                saveVehicle()
+                 presentationMode.wrappedValue.dismiss()
             }, label: { Text("save".uppercased())
             })
                 .padding()
@@ -74,10 +79,21 @@ struct CreateVehicleView: View {
             
         }
     }
-}
+    
+    func saveVehicle(){
 
-struct CreateVehicleView_Previews: PreviewProvider {
-    static var previews: some View {
-        CreateVehicleView()
+        if regNrInput.count > 6 && inspectionDateInput.count > 3 {
+
+            let newVehicle = Vehicle(regNr: regNrInput, inspectionDate: inspectionDateInput, cityAppropiate: cityAppropiate)
+            vehicleList.vehicles.append(newVehicle)
+        
+        }
+        
     }
 }
+
+//struct CreateVehicleView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CreateVehicleView()
+//    }
+//}
