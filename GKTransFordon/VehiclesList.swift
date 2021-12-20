@@ -16,17 +16,12 @@ class VehiclesList : ObservableObject {
     }
     
     func addMockData() {
-        vehicles.append(Vehicle(regNr: "YLJ 066", inspectionDate: "Januari"))
-        vehicles.append(Vehicle(regNr: "ABC 123", inspectionDate: "Februari"))
-        vehicles.append(Vehicle(regNr: "IHK 872", inspectionDate: "Mars"))
-        vehicles.append(Vehicle(regNr: "HEJ 666", inspectionDate: "Januari"))
-        vehicles.append(Vehicle(regNr: "JWK 728", inspectionDate: "December"))
+        vehicles.append(Vehicle(regNr: "YLJ 066", inspectionDate: "Januari", cityAppropiate: true))
+        vehicles.append(Vehicle(regNr: "ABC 123", inspectionDate: "Februari", cityAppropiate: false))
+        vehicles.append(Vehicle(regNr: "IHK 872", inspectionDate: "Mars", cityAppropiate: false))
+        vehicles.append(Vehicle(regNr: "HEJ 666", inspectionDate: "Januari", cityAppropiate: true))
+        vehicles.append(Vehicle(regNr: "JWK 728", inspectionDate: "December", cityAppropiate: true))
     }
-    
-    /*
-     Vehicle(regNr: "YLJ 666", inspectionDate: "Januari"),
-     Vehicle(regNr: "ABC 123", inspectionDate: "Februari"),
-     Vehicle(regNr: "IHK 872", inspectionDate: "Mars")
-     */
+   
     
 }

@@ -20,7 +20,6 @@
 		0F7D35F5276CB22900DEE708 /* VehicleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7D35F4276CB22900DEE708 /* VehicleView.swift */; };
 		0F7D35F7276CBAA600DEE708 /* Incident.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7D35F6276CBAA600DEE708 /* Incident.swift */; };
 		0F7D35F9276CBACF00DEE708 /* VehiclesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7D35F8276CBACF00DEE708 /* VehiclesList.swift */; };
-		0F7D35FB276CD38800DEE708 /* TODO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7D35FA276CD38800DEE708 /* TODO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +56,6 @@
 		0F7D35F4276CB22900DEE708 /* VehicleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleView.swift; sourceTree = "<group>"; };
 		0F7D35F6276CBAA600DEE708 /* Incident.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Incident.swift; sourceTree = "<group>"; };
 		0F7D35F8276CBACF00DEE708 /* VehiclesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesList.swift; sourceTree = "<group>"; };
-		0F7D35FA276CD38800DEE708 /* TODO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TODO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +109,6 @@
 				0F43946B2768E29E004C37BD /* GKTransFordonApp.swift */,
 				0F43946D2768E29E004C37BD /* ContentView.swift */,
 				0F7D35F4276CB22900DEE708 /* VehicleView.swift */,
-				0F7D35FA276CD38800DEE708 /* TODO.swift */,
 				0F39A390276DF65700F92127 /* CreateVehicleView.swift */,
 				0F4394952768E47C004C37BD /* Vehicle.swift */,
 				0F43FBF7276E7EDA00C584C5 /* IncidentView.swift */,
@@ -283,7 +280,6 @@
 				0F39A391276DF65700F92127 /* CreateVehicleView.swift in Sources */,
 				0F43946E2768E29E004C37BD /* ContentView.swift in Sources */,
 				0F7D35F9276CBACF00DEE708 /* VehiclesList.swift in Sources */,
-				0F7D35FB276CD38800DEE708 /* TODO.swift in Sources */,
 				0F43946C2768E29E004C37BD /* GKTransFordonApp.swift in Sources */,
 				0F7D35F5276CB22900DEE708 /* VehicleView.swift in Sources */,
 				0F7D35F7276CBAA600DEE708 /* Incident.swift in Sources */,

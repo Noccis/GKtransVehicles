@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CreateVehicleView: View {
-    
+    @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var vehicleList : VehiclesList
     
     @State var regNrInput : String = ""
@@ -63,7 +63,8 @@ struct CreateVehicleView: View {
     
             Spacer()
             Button(action: {
-                print(regNrInput, inspectionDateInput)
+                saveVehicle()
+                 presentationMode.wrappedValue.dismiss()
             }, label: { Text("save".uppercased())
             })
                 .padding()
@@ -80,14 +81,13 @@ struct CreateVehicleView: View {
     }
     
     func saveVehicle(){
+
+        if regNrInput.count > 6 && inspectionDateInput.count > 3 {
+
+            let newVehicle = Vehicle(regNr: regNrInput, inspectionDate: inspectionDateInput, cityAppropiate: cityAppropiate)
+            vehicleList.vehicles.append(newVehicle)
         
-        
-        vehicleList.append(Vehicle(regNr: <#T##String#>, inspectionDate: <#T##String#>))
-//        if regNrInput.count > 6 && inspectionDateInput.count > 3 {
-//
-//            vehicleList.append(Vehicle(regNr: regNrInput, inspectionDate: inspectionDateInput, cityAppropiate: cityAppropiate))
-//
-//        }
+        }
         
     }
 }

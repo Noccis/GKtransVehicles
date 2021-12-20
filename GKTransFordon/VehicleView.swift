@@ -27,7 +27,7 @@ struct VehicleView: View {
             self.vehicle = vehicle
             
         }else {
-            self.vehicle = Vehicle(regNr: "Reg Nr", inspectionDate: "besiktnings period") // If you remove me, also remove the ! in text regNr and inspection date pls.
+            self.vehicle = Vehicle(regNr: "Reg Nr", inspectionDate: "besiktnings period", cityAppropiate: false) // If you remove me, also remove the ! in text regNr and inspection date pls.
         }
     }
     
