@@ -22,6 +22,19 @@ class VehiclesList : ObservableObject {
         vehicles.append(Vehicle(regNr: "HEJ 666", inspectionDate: "Januari", cityAppropiate: true))
         vehicles.append(Vehicle(regNr: "JWK 728", inspectionDate: "December", cityAppropiate: true))
     }
+    /*
+     func update(entry: JournalEntry, with content: String) {
+          if let index = entries.firstIndex(of: entry) {
+              entries[index].content = content
+         }
+     }
+     */
+    
+    func delete(vehicle: Vehicle) {
+         if let index = vehicles.firstIndex(of: vehicle) {
+             vehicles.remove(at: index)
+        }
+    }
    
     
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Vehicle : Identifiable {
+struct Vehicle : Identifiable, Equatable {
     
     var id = UUID()
     
@@ -18,6 +18,11 @@ struct Vehicle : Identifiable {
     
     var incidentList: [Incident] = []         // Lista med incidenter
         
+    static func == (lhs: Vehicle, rhs: Vehicle) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    
     func createVehicle() {
         
         
