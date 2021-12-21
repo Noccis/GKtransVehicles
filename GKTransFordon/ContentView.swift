@@ -16,20 +16,34 @@ struct ContentView: View {
     var body: some View {
         
         NavigationView {
-            
-            List() {
+            VStack {
                 
-                ForEach(vehicleList.vehicles) { vehicle in
-                    NavigationLink(destination: VehicleView(vehicle: vehicle)) {
-                        RowView(vehicle: vehicle)
-                    }
+                
+                List() {
                     
+                    ForEach(vehicleList.vehicles) { vehicle in
+                        NavigationLink(destination: VehicleView(vehicle: vehicle)) {
+                            RowView(vehicle: vehicle)
+                        }
+                        
+                    }
                 }
+                
+                Button(action: {
+                    print("Beep beep printing")
+                }, label: {
+                    Text("Skriv ut lista")
+                })
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 80, trailing: 0))
+                
+                .navigationBarTitle("Lastbilar")
+                .navigationBarItems(trailing: NavigationLink(destination: CreateVehicleView()) {
+                    Image(systemName: "plus.circle")
+                })
+                
+                
+                
             }
-            .navigationBarTitle("Lastbilar")
-            .navigationBarItems(trailing: NavigationLink(destination: CreateVehicleView()) {
-                Image(systemName: "plus.circle")
-            })
             
         }
     }
