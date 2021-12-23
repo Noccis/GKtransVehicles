@@ -15,3 +15,11 @@ struct Test: Codable , Identifiable{
     var age : Int
    
 }
+/*
+ struct Item : Codable , Identifiable{
+     @DocumentID var id : String?
+     var name : String
+     var category : String = ""
+     var done : Bool = false
+ }
+ */

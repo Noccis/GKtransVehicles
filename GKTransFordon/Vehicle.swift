@@ -7,21 +7,22 @@
 
 import Foundation
 import FirebaseFirestoreSwift
+//
 
-struct Vehicle : Identifiable, Equatable {
+struct Vehicle : Identifiable, Equatable, Codable {
     
-    var id = UUID()
+    @DocumentID var id : String?
     
     var regNr: String
     var inspectionDate: String
     var cityAppropiate: Bool
     
     
-    var incidentList: [Incident] = []         // Lista med incidenter
+//    var incidentList: [Incident] = []         // Lista med incidenter
         
-    static func == (lhs: Vehicle, rhs: Vehicle) -> Bool {
-        return lhs.id == rhs.id
-    }
+//    static func == (lhs: Vehicle, rhs: Vehicle) -> Bool {
+//        return lhs.id == rhs.id
+//    }
     
     
     
