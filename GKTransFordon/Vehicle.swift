@@ -6,10 +6,13 @@
 //
 
 import Foundation
-
-struct Vehicle : Identifiable, Equatable {
+import FirebaseFirestoreSwift
+// Equatable,
+struct Vehicle : Identifiable,  Codable {
+    // Ändrade ID och nu funkar det inte.
     
-    var id = UUID()
+  
+    @DocumentID var id : String?
     
     var regNr: String
     var inspectionDate: String

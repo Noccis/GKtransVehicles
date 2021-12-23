@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import Firebase
 
 
 struct ContentView: View {
+    
+    var db = Firestore.firestore()
     
     @EnvironmentObject var vehicleList : VehiclesList
     

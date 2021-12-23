@@ -6,9 +6,15 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct GKTransFordonApp: App {
+    
+    init() {
+        FirebaseApp.configure()
+    }
+    
     @StateObject var vehicleList = VehiclesList()
     
     var body: some Scene {
