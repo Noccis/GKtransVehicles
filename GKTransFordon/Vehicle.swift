@@ -11,7 +11,8 @@ import FirebaseFirestoreSwift
 
 struct Vehicle : Identifiable, Equatable, Codable {
     
-    @DocumentID var id : String?
+    @DocumentID var fbid : String?
+    var id = UUID()
     
     var regNr: String
     var inspectionDate: String
