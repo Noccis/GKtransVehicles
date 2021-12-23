@@ -12,5 +12,6 @@ import FirebaseFirestoreSwift
 struct Test: Codable , Identifiable{
     @DocumentID var id : String?
     var name : String
+    var age : Int
    
 }

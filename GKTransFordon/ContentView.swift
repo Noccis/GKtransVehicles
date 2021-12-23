@@ -33,11 +33,13 @@ struct ContentView: View {
                 }
                 
                 Button(action: {
-                    print("Beep beep printing")
+//                    print("Beep beep printing")
+                    addDataFB()
                 }, label: {
                     Text("Skriv ut lista")
                 })
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 80, trailing: 0))
+                
                 
                 .navigationBarTitle("Lastbilar")
                 .navigationBarItems(trailing: NavigationLink(destination: CreateVehicleView()) {
@@ -50,6 +52,50 @@ struct ContentView: View {
             
         }
     }
+    //************
+//    func listenToFirestore() {
+//        db.collection("items").addSnapshotListener { snapshot, err in
+//            guard let snapshot = snapshot else { return }
+//            
+//            if let err = err {
+//                print("Error getting document \(err)")
+//            } else {
+//                items.removeAll()
+//                for document in snapshot.documents {
+//                    let result = Result {
+//                        try document.data(as: Item.self)
+//                    }
+//                    switch result {
+//                    case .success(let item) :
+//                        if let item = item {
+//                            //print("Item: \(item)")
+//                            items.append(item)
+//                        } else {
+//                            print("Document does not exist")
+//                        }
+//                    case .failure(let error):
+//                        print("Error decoding item: \(error)")
+//                    }
+//                }
+//            }
+//        }
+//    }
+    
+    func addDataFB() {
+        
+        let test = Test(name: "Beep", age: 2)
+        
+        do {
+            _ = try db.collection("test").addDocument(from: test)
+            print("I think I saved?")
+        } catch {
+            print("Error saving to DB")
+        }
+       // db.collection("tmp").addDocument(data: ["name" : "David"])
+    }
+        
+        
+    
     
     
     

@@ -7,12 +7,10 @@
 
 import Foundation
 import FirebaseFirestoreSwift
-// Equatable,
-struct Vehicle : Identifiable,  Codable {
-    // Ändrade ID och nu funkar det inte.
+
+struct Vehicle : Identifiable, Equatable {
     
-  
-    @DocumentID var id : String?
+    var id = UUID()
     
     var regNr: String
     var inspectionDate: String
@@ -26,16 +24,6 @@ struct Vehicle : Identifiable,  Codable {
     }
     
     
-    func createVehicle() {
-        
-        
-    }
-    
-    func deleteVehicle() {
-        
-        
-    }
-    
     
     
     func printVehicleData() {
@@ -44,3 +32,4 @@ struct Vehicle : Identifiable,  Codable {
     }
     
 }
+
